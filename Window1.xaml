@@ -1,0 +1,58 @@
+﻿<Window x:Class="Password_Manager.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Manager"
+        mc:Ignorable="d"
+        Title="View Password" Height="450" Width="600" Background="#453F3C" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="https://cdn-icons-png.flaticon.com/512/5206/5206964.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Platform:" Foreground="#F37748" FontWeight="Bold" FontSize="20" Margin="10" VerticalAlignment="Center"></Label>
+            <Label Grid.Column="1" x:Name="Win1platform" Content="Google" Foreground="White" FontSize="20" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Username:" Foreground="#F37748" FontWeight="Bold" FontSize="20" Margin="10" VerticalAlignment="Center"></Label>
+            <Label Grid.Column="1" x:Name="Win1username" Content="Username" Foreground="White" FontSize="20" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Password:" Foreground="#F37748" FontWeight="Bold" FontSize="20" Margin="10" VerticalAlignment="Center"></Label>
+            <Label Grid.Column="1" x:Name="Win1password" Content="Password" Foreground="White" FontSize="20" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Email:" Foreground="#F37748" FontWeight="Bold" FontSize="20" Margin="10" VerticalAlignment="Center"></Label>
+            <Label Grid.Column="1" x:Name="Win1email" Content="Email" Foreground="White" FontSize="20" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Phone:" Foreground="#F37748" FontWeight="Bold" FontSize="20" Margin="10" VerticalAlignment="Center"></Label>
+            <Label Grid.Column="1" x:Name="Win1phone" Content="Phone" Foreground="White" FontSize="20" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        </Grid>
+    </Grid>
+</Window>

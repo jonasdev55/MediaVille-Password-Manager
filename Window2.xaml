@@ -1,0 +1,161 @@
+﻿<Window x:Class="Password_Manager.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Manager"
+        mc:Ignorable="d"
+        Title="Add Password" Height="300" Width="800" Background="#453F3C" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="https://cdn-icons-png.flaticon.com/512/5206/5206964.png">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Platform" FontSize="20" Foreground="#F37748" VerticalAlignment="Center" FontWeight="Black"></Label>
+                <TextBox Grid.Column="1" Name="platform">
+                    <TextBox.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Background" Value="#453F3C"></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="Padding" Value="5"></Setter>
+                            <Setter Property="Margin" Value="5"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="#30323D"></Setter>
+                        </Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Username" FontSize="20" Foreground="#F37748" VerticalAlignment="Center" FontWeight="Black"></Label>
+                <TextBox Grid.Column="1" Name="username">
+                    <TextBox.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Background" Value="#453F3C"></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="Padding" Value="5"></Setter>
+                            <Setter Property="Margin" Value="5"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="#30323D"></Setter>
+                        </Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Password" FontSize="20" Foreground="#F37748" VerticalAlignment="Center" FontWeight="Black"></Label>
+                <TextBox Grid.Column="1" Name="password">
+                    <TextBox.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Background" Value="#453F3C"></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="Padding" Value="5"></Setter>
+                            <Setter Property="Margin" Value="5"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="#30323D"></Setter>
+                        </Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Email" FontSize="20" Foreground="#F37748" VerticalAlignment="Center" FontWeight="Black"></Label>
+                <TextBox Grid.Column="1" Name="email">
+                    <TextBox.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Background" Value="#453F3C"></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="Padding" Value="5"></Setter>
+                            <Setter Property="Margin" Value="5"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="#30323D"></Setter>
+                        </Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Phone Number" FontSize="20" Foreground="#F37748" VerticalAlignment="Center" FontWeight="Black"></Label>
+                <TextBox Grid.Column="1" Name="phonenumber">
+                    <TextBox.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Background" Value="#453F3C"></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="Padding" Value="5"></Setter>
+                            <Setter Property="Margin" Value="5"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="#30323D"></Setter>
+                        </Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!-- button -->
+                <Button Grid.Column="1" Name="button" Content="Save" Click="SaveItem">
+                    <Button.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FED766"></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Foreground" Value="Black"></Setter>
+                            <Setter Property="Padding" Value="5"></Setter>
+                            <Setter Property="Margin" Value="5"></Setter>
+                            <Setter Property="BorderThickness" Value="1"></Setter>
+                            <Setter Property="BorderBrush" Value="#FED766"></Setter>
+                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                            <Setter Property="FontSize" Value="20"></Setter>
+                        </Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

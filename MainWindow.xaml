@@ -1,0 +1,140 @@
+﻿<Window x:Class="Password_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Manager"
+        mc:Ignorable="d"
+        Title="Password Manager" Height="600" Width="400" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" Background="#30323D" Icon="https://cdn-icons-png.flaticon.com/512/5206/5206964.png">
+    <Grid>
+        <Grid>
+            <DataGrid Name="dataGrid">
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="Platform" Width="1.8*" Binding="{Binding Platform}"></DataGridTextColumn>
+                    <DataGridTemplateColumn IsReadOnly="True" Width="1*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="View" Click="ViewItem">
+                                    <Button.Resources>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="#FED766"></Setter>
+                                            <Setter Property="BorderThickness" Value="0"></Setter>
+                                            <Setter Property="Foreground" Value="Black"></Setter>
+                                            <Setter Property="Padding" Value="5"></Setter>
+                                            <Setter Property="Margin" Value="1,5,1,5"></Setter>
+                                            <Setter Property="FontSize" Value="20"></Setter>
+                                        </Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="5"></Setter>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn IsReadOnly="True" Width="1*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" Click="EditItem">
+                                    <Button.Resources>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="#FED766"></Setter>
+                                            <Setter Property="BorderThickness" Value="0"></Setter>
+                                            <Setter Property="Foreground" Value="Black"></Setter>
+                                            <Setter Property="Padding" Value="5"></Setter>
+                                            <Setter Property="Margin" Value="1,5,1,5"></Setter>
+                                            <Setter Property="FontSize" Value="20"></Setter>
+                                        </Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="5"></Setter>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn IsReadOnly="True" Width="1*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" Click="DeleteItem">
+                                    <Button.Resources>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="#FED766"></Setter>
+                                            <Setter Property="BorderThickness" Value="0"></Setter>
+                                            <Setter Property="Foreground" Value="Black"></Setter>
+                                            <Setter Property="Padding" Value="5"></Setter>
+                                            <Setter Property="Margin" Value="1,5,1,5"></Setter>
+                                            <Setter Property="FontSize" Value="20"></Setter>
+                                        </Style>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="5"></Setter>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+                <DataGrid.Resources>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="GridLinesVisibility" Value="None"></Setter>
+                        <Setter Property="HeadersVisibility" Value="Column"></Setter>
+                    </Style>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#F37748"></Setter>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                        <Setter Property="Padding" Value="5"></Setter>
+                    </Style>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Background" Value="#30323D"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                        <Setter Property="Margin" Value="5"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Transparent"></Setter>
+                                <Setter Property="Foreground" Value="White"></Setter>
+                                <Setter Property="BorderThickness" Value="0"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="#30323D"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Transparent"></Setter>
+                                <Setter Property="Foreground" Value="White"></Setter>
+                                <Setter Property="BorderThickness" Value="0"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>
+            <Button Content="Add" Click="AddItem">
+                <Button.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#FED766"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <Setter Property="Foreground" Value="Black"></Setter>
+                        <Setter Property="Padding" Value="5"></Setter>
+                        <Setter Property="Margin" Value="5"></Setter>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
