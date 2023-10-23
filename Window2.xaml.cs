@@ -26,6 +26,17 @@ namespace Password_Manager
         {
             InitializeComponent();
             MainWindow = mainWindow;
+
+            //set defaults from json
+            string defaults = System.IO.File.ReadAllText("defaults.json");
+            defaults = defaults.Substring(defaults.IndexOf("defaultemail") + 16);
+            defaults = defaults.Substring(0, defaults.IndexOf("\""));
+            email.Text = defaults;
+
+            defaults = System.IO.File.ReadAllText("defaults.json");
+            defaults = defaults.Substring(defaults.IndexOf("defaultphonenumber") + 22);
+            defaults = defaults.Substring(0, defaults.IndexOf("\""));
+            phonenumber.Text = defaults;
         }
 
         private void SaveItem(object sender, RoutedEventArgs e)

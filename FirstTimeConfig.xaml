@@ -1,0 +1,137 @@
+﻿<Window x:Class="Password_Manager.FirstTimeConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Manager"
+        mc:Ignorable="d"
+        Title="Passmanager Configurator" Height="450" Width="800" ResizeMode="NoResize" Background="#30323D">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Welcome to Password Manager, Please complete a few configurations before starting." TextWrapping="Wrap" TextAlignment="Center" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="10"></Setter>
+                    <Setter Property="FontFamily" Value="Arial"></Setter>
+                    <Setter Property="Foreground" Value="#F37748"></Setter>
+                    <Setter Property="FontWeight" Value="Bold"></Setter>
+                </Style>
+            </TextBlock.Resources>
+        </TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Please enter a master password." TextWrapping="Wrap" TextAlignment="Left" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="10"></Setter>
+                        <Setter Property="FontFamily" Value="Arial"></Setter>
+                        <Setter Property="Foreground" Value="#FED766"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                    </Style>
+                </TextBlock.Resources>
+            </TextBlock>
+            <TextBox Grid.Row="1" x:Name="MasterPassword">
+                <TextBox.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Background" Value="#30323D"></Setter>
+                        <Setter Property="Foreground" Value="white"></Setter>
+                        <Setter Property="Margin" Value="10,0,10,0"></Setter>
+                        <Setter Property="BorderBrush" Value="#453F3C"></Setter>
+                        <Setter Property="BorderThickness" Value="2"></Setter>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Enter a default e-mail adress." TextWrapping="Wrap" TextAlignment="Left" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="10"></Setter>
+                        <Setter Property="FontFamily" Value="Arial"></Setter>
+                        <Setter Property="Foreground" Value="#FED766"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                    </Style>
+                </TextBlock.Resources>
+            </TextBlock>
+            <TextBox Grid.Row="1" x:Name="DefaultEmail">
+                <TextBox.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Background" Value="#30323D"></Setter>
+                        <Setter Property="Foreground" Value="white"></Setter>
+                        <Setter Property="Margin" Value="10,0,10,0"></Setter>
+                        <Setter Property="BorderBrush" Value="#453F3C"></Setter>
+                        <Setter Property="BorderThickness" Value="2"></Setter>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Enter a default phone number." TextWrapping="Wrap" TextAlignment="Left" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Margin" Value="10"></Setter>
+                        <Setter Property="FontFamily" Value="Arial"></Setter>
+                        <Setter Property="Foreground" Value="#FED766"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                    </Style>
+                </TextBlock.Resources>
+            </TextBlock>
+            <TextBox Grid.Row="1" x:Name="DefaultPhone">
+                <TextBox.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Background" Value="#30323D"></Setter>
+                        <Setter Property="Foreground" Value="white"></Setter>
+                        <Setter Property="Margin" Value="10,0,10,0"></Setter>
+                        <Setter Property="BorderBrush" Value="#453F3C"></Setter>
+                        <Setter Property="BorderThickness" Value="2"></Setter>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Button x:Name="Submit" Content="Submit" Click="Submit_Click">
+                <Button.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#FED766"></Setter>
+                        <Setter Property="Foreground" Value="Black"></Setter>
+                        <Setter Property="Margin" Value="10"></Setter>
+                        <Setter Property="BorderBrush" Value="#453F3C"></Setter>
+                        <Setter Property="BorderThickness" Value="2"></Setter>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="FontFamily" Value="Arial"></Setter>
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                    </Style>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

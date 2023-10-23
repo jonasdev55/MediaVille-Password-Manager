@@ -26,6 +26,17 @@ namespace Password_Manager
         {
             InitializeComponent();
 
+            //check if first time running
+            if (!System.IO.File.Exists("defaults.json"))
+            {
+                FirstTimeConfig firstRun = new FirstTimeConfig();
+                firstRun.ShowDialog();
+            }
+
+
+            askForPassword askForPassword = new askForPassword();
+            askForPassword.ShowDialog();
+
             //initialize local database
             if (!System.IO.File.Exists("passwords.db"))
             {
@@ -68,25 +79,25 @@ namespace Password_Manager
             //open window1 and pass values
             Window1 window1 = new Window1();
             window1.setValues(passwordDetails.Platform, passwordDetails.Username, passwordDetails.Password, passwordDetails.Email, passwordDetails.PhoneNumber);
-            window1.Show();
+            window1.ShowDialog();
         }
 
         private void AddItem(object sender, RoutedEventArgs e)
         {
             Window2 window2 = new Window2(this);
-            window2.Show();
+            window2.ShowDialog();
         }
 
         private void DeleteItem(object sender, RoutedEventArgs e)
         {
             DeleteWarning deleteWarning = new DeleteWarning(this);
-            deleteWarning.Show();
+            deleteWarning.ShowDialog();
         }
 
         private void EditItem(object sender, RoutedEventArgs e)
         {
             Edit edit = new Edit(this);
-            edit.Show();
+            edit.ShowDialog();
         }
     }
 
