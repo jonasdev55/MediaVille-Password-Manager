@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Password_Manager"
         mc:Ignorable="d"
-        Title="Password Manager" Height="600" Width="400" 
+        Title="MediaVille Password Manager" Height="600" Width="400" 
         WindowStartupLocation="CenterScreen" 
         ResizeMode="NoResize" Background="#30323D" Icon="https://cdn-icons-png.flaticon.com/512/5206/5206964.png">
     <Grid>
